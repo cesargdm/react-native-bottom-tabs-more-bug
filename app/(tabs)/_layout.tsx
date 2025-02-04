@@ -1,20 +1,20 @@
-import React from 'react';
-import { withLayoutContext } from 'expo-router';
+import React from 'react'
+import { withLayoutContext } from 'expo-router'
 import {
   createNativeBottomTabNavigator,
   NativeBottomTabNavigationOptions,
   NativeBottomTabNavigationEventMap,
-} from '@bottom-tabs/react-navigation';
-import { ParamListBase, TabNavigationState } from '@react-navigation/native';
+} from '@bottom-tabs/react-navigation'
+import { ParamListBase, TabNavigationState } from '@react-navigation/native'
 
-const BottomTabNavigator = createNativeBottomTabNavigator().Navigator;
+const BottomTabNavigator = createNativeBottomTabNavigator().Navigator
 
 const Tabs = withLayoutContext<
   NativeBottomTabNavigationOptions,
   typeof BottomTabNavigator,
   TabNavigationState<ParamListBase>,
   NativeBottomTabNavigationEventMap
->(BottomTabNavigator);
+>(BottomTabNavigator)
 
 export default function TabLayout() {
   return (
@@ -33,6 +33,41 @@ export default function TabLayout() {
           tabBarIcon: () => ({ sfSymbol: 'paperplane.fill' }),
         }}
       />
+      <Tabs.Screen
+        name="two"
+        options={{
+          title: 'two',
+          tabBarIcon: () => ({ sfSymbol: 'paperplane.fill' }),
+        }}
+      />
+      <Tabs.Screen
+        name="three"
+        options={{
+          title: 'three',
+          tabBarIcon: () => ({ sfSymbol: 'paperplane.fill' }),
+        }}
+      />
+      <Tabs.Screen
+        name="four"
+        options={{
+          title: 'four',
+          tabBarIcon: () => ({ sfSymbol: 'paperplane.fill' }),
+        }}
+      />
+      <Tabs.Screen
+        name="five"
+        options={{
+          title: 'five',
+          tabBarIcon: () => ({ sfSymbol: 'paperplane.fill' }),
+        }}
+      />
+      <Tabs.Screen
+        name="six"
+        options={{
+          title: 'six',
+          tabBarIcon: () => ({ sfSymbol: 'paperplane.fill' }),
+        }}
+      />
     </Tabs>
-  );
+  )
 }
